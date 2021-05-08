@@ -15,8 +15,8 @@ class ExampleBackgroundContentView: ExampleBasicContentView {
         
         textColor = UIColor.init(white: 165.0 / 255.0, alpha: 1.0)
         highlightTextColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
-        iconColor = UIColor.init(white: 165.0 / 255.0, alpha: 1.0)
-        highlightIconColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
+//        iconColor = UIColor.init(white: 165.0 / 255.0, alpha: 1.0)
+//        highlightIconColor = UIColor.init(white: 255.0 / 255.0, alpha: 1.0)
         backdropColor = UIColor.init(red: 37/255.0, green: 39/255.0, blue: 42/255.0, alpha: 1.0)
         highlightBackdropColor = UIColor.init(red: 22/255.0, green: 24/255.0, blue: 25/255.0, alpha: 1.0)
     }
@@ -25,8 +25,8 @@ class ExampleBackgroundContentView: ExampleBasicContentView {
         self.init(frame: CGRect.zero)
         textColor = .white
         highlightTextColor = .white
-        iconColor = .white
-        highlightIconColor = .white
+//        iconColor = .white
+//        highlightIconColor = .white
         backdropColor = UIColor.init(red: 17/255.0, green: 86/255.0, blue: 136/255.0, alpha: 1.0)
         highlightBackdropColor = UIColor.init(red: 22/255.0, green: 24/255.0, blue: 25/255.0, alpha: 1.0)
         if implies {

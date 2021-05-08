@@ -78,23 +78,23 @@ open class ESTabBarItemContentView: UIView {
     /// Text color when highlighted, default is `UIColor(red: 0.0, green: 0.47843137, blue: 1.0, alpha: 1.0)`.
     open var highlightTextColor = UIColor(red: 0.0, green: 0.47843137, blue: 1.0, alpha: 1.0) {
         didSet {
-            if selected { titleLabel.textColor = highlightIconColor }
+            if selected { titleLabel.textColor = highlightTextColor }
         }
     }
     
-    /// Icon color, default is `UIColor(white: 0.57254902, alpha: 1.0)`.
-    open var iconColor = UIColor(white: 0.57254902, alpha: 1.0) {
-        didSet {
-            if !selected { imageView.tintColor = iconColor }
-        }
-    }
-    
-    /// Icon color when highlighted, default is `UIColor(red: 0.0, green: 0.47843137, blue: 1.0, alpha: 1.0)`.
-    open var highlightIconColor = UIColor(red: 0.0, green: 0.47843137, blue: 1.0, alpha: 1.0) {
-        didSet {
-            if selected { imageView.tintColor = highlightIconColor }
-        }
-    }
+//    /// Icon color, default is `UIColor(white: 0.57254902, alpha: 1.0)`.
+//    open var iconColor = UIColor(white: 0.57254902, alpha: 1.0) {
+//        didSet {
+//            if !selected { imageView.tintColor = iconColor }
+//        }
+//    }
+//
+//    /// Icon color when highlighted, default is `UIColor(red: 0.0, green: 0.47843137, blue: 1.0, alpha: 1.0)`.
+//    open var highlightIconColor = UIColor(red: 0.0, green: 0.47843137, blue: 1.0, alpha: 1.0) {
+//        didSet {
+//            if selected { imageView.tintColor = highlightIconColor }
+//        }
+//    }
     
     /// Background color, default is `UIColor.clear`.
     open var backdropColor = UIColor.clear {
@@ -211,7 +211,7 @@ open class ESTabBarItemContentView: UIView {
         addSubview(titleLabel)
         
         titleLabel.textColor = textColor
-        imageView.tintColor = iconColor
+//        imageView.tintColor = iconColor
         backgroundColor = backdropColor
     }
     
@@ -221,7 +221,7 @@ open class ESTabBarItemContentView: UIView {
 
     open func updateDisplay() {
         imageView.image = (selected ? (selectedImage ?? image) : image)?.withRenderingMode(renderingMode)
-        imageView.tintColor = selected ? highlightIconColor : iconColor
+//        imageView.tintColor = selected ? highlightIconColor : iconColor
         titleLabel.textColor = selected ? highlightTextColor : textColor
         backgroundColor = selected ? highlightBackdropColor : backdropColor
     }
